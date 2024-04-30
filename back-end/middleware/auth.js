@@ -1,30 +1,26 @@
-// middleware/auth.js
+const ErrorHandler = require("../utils/ErrorHandler");
+const catchAsyncErrors = require("./CatchAsyncErrors");
 const jwt = require("jsonwebtoken");
 const User = require("../model/user");
-const ErrorHandler = require("../utils/ErrorHandler");
 
-module.exports = async (req, res, next) => {
-    let token;
+exports.isAuthenticated = catchAsyncErrors(async(req,res,next) => {
+    const {token} =req.cookies;
 
-    if (req.headers.authorization && req.headers.authorization.startsWith("Bearer")) {
-        token = req.headers.authorization.split(" ")[1];
+    if(!token){
+        return next(new ErrorHandler("Please login to  continue", 401));
     }
 
-    if (!token) {
-        return next(new ErrorHandler("Not authorized to access this route", 401));
-    }
+    const decoded = jwt.verify(token, process.env.JWT_SECRET_KEY);
 
-    try {
-        const decoded = jwt.verify(token, process.env.JWT_SECRET_KEY);
-        req.user = await User.findById(decoded.id);
+    req.user = await User.findById(decoded.id);
+    next();
+});
 
-        if (!req.user) {
-            return next(new ErrorHandler("User not found", 404));
-        }
-
+exports.isAdmin  = (...roles) => {
+    return(req,res,next) => {
+        if(!roles.includes(req.user.role)){
+            return next(new ErrorHandler('${req.user.role} cannot access these reseource'))
+        };
         next();
-    } catch (error) {
-        return next(new ErrorHandler("Not authorized to access this route", 401));
     }
-};
-S
+}

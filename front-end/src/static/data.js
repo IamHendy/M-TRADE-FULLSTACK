@@ -194,21 +194,21 @@ export const navItems = [
         title: " Cereals",
         subTitle: "",
         image_Url:
-        "https://www.istockphoto.com/photo/seamless-texture-with-legumes-gm178384298-20447381?searchscope=image%2Cfilm",
+        "https://www.shutterstock.com/shutterstock/photos/418575892/display_1500/stock-photo-cereal-grains-seeds-beans-418575892.jpg",
     },
     {
         id: 2,
         title: " Tubers",
         subTitle: "",
         image_Url:
-        "https://www.istockphoto.com/photo/organic-roots-legumes-and-tubers-still-life-gm1179964637-330376955?searchscope=image%2Cfilm",
+        "https://img.freepik.com/free-photo/top-view-potatoes-basket-plate-with-salt-black-pepper-white_141793-12761.jpg?t=st=1713108237~exp=1713111837~hmac=05cf7f903f536f090caafad8c92a34aac29a334636e7ba6f5d8c3eb36d6ebd55&w=740",
     },
     {
         id: 3,
         title: " Dairy Products",
         subTitle: "",
         image_Url:
-        "https://www.istockphoto.com/photo/different-types-of-dairy-products-gm949394412-259168264?searchscope=image%2Cfilm",
+        "https://img.freepik.com/free-vector/realistic-set-two-blank-pots-with-open-foil-lids-plastic-containers-jars-with-spoons_1441-1852.jpg?t=st=1713108424~exp=1713112024~hmac=14758b6f95be45494373e6092a6730fa99fdcaa90c12fce832061761de55c384&w=740",
     },
     {
         id: 4,
@@ -258,13 +258,13 @@ export const navItems = [
       title: "Gifts",
       subTitle: "",
       image_Url:
-        "https://securecdn.pymnts.com/wp-content/uploads/2014/11/Gifts-Photo-700x489.jpg",
+        "https://img.freepik.com/free-photo/gift-box-isolated-white_74190-2837.jpg?t=st=1713108755~exp=1713112355~hmac=6e3fef1627aa45bc3e04618645f8f4def932da387e6be9e262cd95ee1459543c&w=740",
     },
     {
       id: 11,
       title: "Pet Care",
       subTitle: "",
-      image_Url: "https://cdn.openpr.com/T/c/Tc15444071_g.jpg",
+      image_Url: "https://img.freepik.com/free-photo/close-up-dog-accessories_23-2150959988.jpg?t=st=1713108594~exp=1713112194~hmac=830bcbe104064baa838069d9fd06c579264f7ba605cfa73c97b2c54e7fd42d2b&w=740",
     },
     {
       id: 12,
